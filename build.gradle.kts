@@ -6,6 +6,8 @@ plugins {
     kotlin("jvm") version "1.8.22"
     id("io.ktor.plugin") version "2.3.1"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.22"
+// Converts Kotlin objects into a serialized form like JSON and vice versa.
+// Formats API output to and to consume user input that is structured in JSON.
 }
 
 group = "com.example"
@@ -30,3 +32,30 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
+
+/*
+ktor-server-core
+    adds Ktor's core components to our project
+ktor-server-netty
+    Adds the netty engine to our project
+    Allows us to use server functionality without having to rely on an external application container
+ktor-server-content-negotiation   &  ktor-serialization-kotlinx-json
+    Provide a convenient mechanism for converting Kotlin objects into a serialized form like JSON, and vice versa
+    We use this to format our APIs output and to consume user input that is structured in JSON
+logback-classic
+    Provides an implementation of SLF4J
+    Allows us to see nicely formatted logs in a console
+ktor-server-host & kotlin-test-junit
+    Allows us to test parts of our Ktor App without having to use the whole HTTP stack in the process
+    Used to define unit tests for our project
+*/
+
+
+
+
+
+
+
+
+
+
